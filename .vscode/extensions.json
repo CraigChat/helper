@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "deepscan.vscode-deepscan",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "gruntfuggly.todo-tree"
+  ]
+}
