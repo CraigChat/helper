@@ -4,10 +4,15 @@ import { CannedMessage } from '../../util/abstracts';
 
 export default class Dm extends CannedMessage {
   content = {
-    content: stripIndents`
+    embeds: [
+      {
+        title: 'The link is sent via DM',
+        description: stripIndents`
       Quoth the web site:
       > Craig tells you by private message where you can download your audio. Since you can download while still recording, he tells you at the beginning of recording, not the end!
     `
+      }
+    ]
   };
 
   constructor(client: DexareClient<any>) {

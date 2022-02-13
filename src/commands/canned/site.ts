@@ -1,9 +1,16 @@
+import { oneLine } from 'common-tags';
 import { DexareClient } from 'dexare';
 import { CannedMessage } from '../../util/abstracts';
 
 export default class Site extends CannedMessage {
   content = {
-    content: "Craig's website: https://craig.chat"
+    embeds: [
+      {
+        title: 'Main Site',
+        url: 'ttps://craig.chat',
+        description: oneLine`Craig's website: https://craig.chat`
+      }
+    ]
   };
 
   constructor(client: DexareClient<any>) {

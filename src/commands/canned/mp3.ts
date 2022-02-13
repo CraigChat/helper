@@ -1,9 +1,15 @@
+import { oneLine } from 'common-tags';
 import { DexareClient } from 'dexare';
 import { CannedMessage } from '../../util/abstracts';
 
 export default class Mp3 extends CannedMessage {
   content = {
-    content: 'Join the 21st century. http://craig.chat/home/newbie.html'
+    embeds: [
+      {
+        title: 'MP3',
+        description: oneLine` Join the 21st century. http://craig.chat/home/newbie.html`
+      }
+    ]
   };
 
   constructor(client: DexareClient<any>) {

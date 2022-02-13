@@ -4,10 +4,15 @@ import { CannedMessage } from '../../util/abstracts';
 
 export default class Align extends CannedMessage {
   content = {
-    content: stripIndents`
+    embeds: [
+      {
+        title: 'Align',
+        description: stripIndents`
       Quoth the web site:
       > No matter how long your recording is, no matter how many speakers are recorded, and even if speakers join late, every audio file delivered will be in perfect sync with each other.
     `
+      }
+    ]
   };
 
   constructor(client: DexareClient<any>) {
