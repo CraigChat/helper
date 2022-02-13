@@ -7,8 +7,9 @@ export default class Site extends CannedMessage {
     embeds: [
       {
         title: 'Main Site',
-        url: 'ttps://craig.chat',
-        description: oneLine`Craig's website: https://craig.chat`
+        url: 'https://craig.chat',
+        description: oneLine`
+        Craig's website: https://craig.chat`
       }
     ]
   };
