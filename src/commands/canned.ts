@@ -26,7 +26,7 @@ export default class CannedCommand extends GeneralCommand {
 
     return stripIndents`
       **Canned messages:**
-      ${commands.map((command) => `${prefix}${command.name} - *${command.name}*`).join('\n')}
+      ${commands.map((command) => `${prefix}${command.name} - *${command.description}*`).join('\n')}
     `;
   }
 }
