@@ -87,7 +87,7 @@ export abstract class CannedMessage extends GeneralCommand {
   async run(ctx: CommandContext) {
     const prepend = ctx.message.mentions[1]?.mention || ctx.message.mentions[0]?.mention || '';
     await ctx.reply(
-      defaultsDeep(this.content, {
+      defaultsDeep({}, this.content, {
         content: `${prepend ? `${prepend}: ` : ''}${this.content.content ?? ''}`,
         embeds: [
           {
