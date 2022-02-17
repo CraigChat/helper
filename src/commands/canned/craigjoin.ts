@@ -12,7 +12,7 @@ export default class Craigjoin extends CannedMessage {
           If you want Giarc to join, use \`/join\` from Giarc's slash commands (or \`@Giarc join\`) and it should work.
           If you don't see Giarc's slash commands when you press \`/\` in your server, [re-invite Giarc](https://discordapp.com/oauth2/authorize?client_id=486698344429781028&scope=bot+applications.commands).
 
-          After April 30th (or earlier with notice) The \`:craig: join\` feature will no longer be available so it's not a high periority to resolve this issue.
+          After April 30th (or earlier with notice) The \`:craig: join\` feature will no longer be available so it's not a high priority to resolve this issue.
         `
       }
     ]
