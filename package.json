@@ -29,7 +29,7 @@
     "@dexare/logger": "^1.0.1",
     "common-tags": "^1.8.2",
     "config": "^3.3.7",
-    "dexare": "^2.2.2",
+    "dexare": "^2.2.3",
     "eris": "^0.16.1",
     "lodash": "^4.17.21"
   },

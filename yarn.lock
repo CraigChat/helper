@@ -613,21 +613,10 @@ defer-to-connect@^1.0.1:
   resolved "https://registry.yarnpkg.com/defer-to-connect/-/defer-to-connect-1.1.3.tgz#331ae050c08dcf789f8c83a7b81f0ed94f4ac591"
   integrity sha512-0ISdNousHvZT2EiFlZeZAHBUvSxmKswVCEf8hW7KWgG4a8MVEu/3Vb6uWYozkjylyCxe0JBIiRB1jV45S70WVQ==
 
-dexare@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/dexare/-/dexare-2.2.1.tgz#f674667e6d6ac9605b3579de2f03decba3f02424"
-  integrity sha512-S4aaYeyd1uKEMPB8EHJV7/hCjj4V7SkZHzKpRbTtFr7XdpcquwJgTFbHTcygxpVsaRgzTef84sCyTsLOroy8+Q==
-  dependencies:
-    "@discordjs/collection" "0.1.6"
-    common-tags "^1.8.2"
-    eris "^0.16.1"
-    eventemitter3 "^4.0.7"
-    lodash "^4.17.21"
-
-dexare@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/dexare/-/dexare-2.2.2.tgz#2abd353b1a9d82a94b24ecda338c462d8a001fd9"
-  integrity sha512-5u3p+7TzHDZ4Aum9JrNUjUPRhnjttDeH6ZAWrzPTRI5w/U59mm8Tk5FBL1A7JXBg4HrpYMPklFzgfyxWjnA2fA==
+dexare@^2.2.1, dexare@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/dexare/-/dexare-2.2.3.tgz#848cce4606548c9c893f184ebb87bf3fc10207b4"
+  integrity sha512-eGkLLbttVTG4WOJ+dMrNpVPF3cljWlA0Pzi8e/AkmnerEuvcbDGKEyVZ65MFBg+FJeOFwAkqFN1t2hL0gZT6QA==
   dependencies:
     "@discordjs/collection" "0.1.6"
     common-tags "^1.8.2"
