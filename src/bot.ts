@@ -1,7 +1,7 @@
-import { DexareClient, BaseConfig } from 'dexare';
-import config from 'config';
-import path from 'path';
 import LoggerModule from '@dexare/logger';
+import config from 'config';
+import { BaseConfig, DexareClient } from 'dexare';
+import path from 'path';
 
 export const PRODUCTION = process.env.NODE_ENV === 'production';
 

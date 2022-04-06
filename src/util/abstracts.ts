@@ -37,15 +37,11 @@ export abstract class GeneralCommand extends DexareCommand {
       const missing = this.userPermissions.filter((perm: string) => !permissionMap[perm]);
 
       if (missing.length > 0) {
-        if (missing.includes('dexare.elevated'))
-          return `The \`${this.name}\` command can only be used by the bot developers or elevated users.`;
-        else if (missing.includes('dexare.nsfwchannel'))
-          return `The \`${this.name}\` command can only be ran in NSFW channels.`;
+        if (missing.includes('dexare.elevated')) return `The \`${this.name}\` command can only be used by the bot developers or elevated users.`;
+        else if (missing.includes('dexare.nsfwchannel')) return `The \`${this.name}\` command can only be ran in NSFW channels.`;
         else if (missing.includes('dexare.inguild')) return `The \`${this.name}\` command can only be ran in guilds.`;
         else if (missing.length === 1) {
-          return `The \`${this.name}\` command requires you to have the "${
-            PermissionNames[missing[0]] || missing[0]
-          }" permission.`;
+          return `The \`${this.name}\` command requires you to have the "${PermissionNames[missing[0]] || missing[0]}" permission.`;
         }
         return oneLine`
           The \`${this.name}\` command requires you to have the following permissions:
@@ -58,8 +54,7 @@ export abstract class GeneralCommand extends DexareCommand {
   }
 
   finalize(response: any, ctx: CommandContext) {
-    if (typeof response === 'string' || (response && response.constructor && response.constructor.name === 'Object'))
-      return ctx.reply(response);
+    if (typeof response === 'string' || (response && response.constructor && response.constructor.name === 'Object')) return ctx.reply(response);
   }
 }
 

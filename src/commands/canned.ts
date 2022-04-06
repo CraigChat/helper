@@ -1,5 +1,6 @@
 import { stripIndents } from 'common-tags';
 import { CommandContext, DexareClient } from 'dexare';
+
 import { GeneralCommand } from '../util/abstracts';
 
 export default class CannedCommand extends GeneralCommand {
