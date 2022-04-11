@@ -23,10 +23,10 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
-"@dexare/logger@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@dexare/logger/-/logger-1.0.1.tgz#5483ebf3024616869e8d59954965188b260d8155"
-  integrity sha512-i9EXscFT7YvB+aIy1ItAK33MzsGyby6xhwDTXpTQcFBG4s1d+0B3QYEsDaovdFirKjg9RyvPB6fJ4kcvyFvyDw==
+"@dexare/logger@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@dexare/logger/-/logger-1.0.2.tgz#7ebc58574bf660bb1e4caa54c843c9eba0b3a7d3"
+  integrity sha512-TH+qo0APuMsellWPyJ0OQ2pHDZOUAgIGAj2vsqzQGzxF/xifeKWvcRbzYh341b8sguI+fEQMlD9KsMecnKjAwg==
   dependencies:
     chalk "4"
     dayjs "^1.10.7"
