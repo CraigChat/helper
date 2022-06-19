@@ -1,4 +1,3 @@
-import { stripIndents } from 'common-tags';
 import { DexareClient } from 'dexare';
 
 import { CannedMessage } from '../../util/abstracts';

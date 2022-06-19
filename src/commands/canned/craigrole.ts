@@ -7,11 +7,12 @@ export default class Craigrole extends CannedMessage {
   content = {
     embeds: [
       {
-        title: 'The "Craig" Role',
+        title: 'Access Roles',
         description: stripIndents`
-          Quoth the web site:
-          > Any user with permission to manage the server can use Craig, or you can create a "Craig" role and assign it to any users who should be allowed. The "Craig" role requires no special permissions; it only needs to be named "Craig".
-        `
+          Quoth the [website](https://craig.chat/docs/#setting-up-access-roles):
+          > Previously, access roles were any roles with the name “Craig”. Now, you can set your access roles with the \`/server-settings access-role\` command. You must be able to manage the server or be the server owner to manage access roles. You can view your current server settings with \`/server-settings view\`.
+        `,
+        image: { url: 'https://get.snaz.in/7phpGrs.png' }
       }
     ]
   };
@@ -19,8 +20,8 @@ export default class Craigrole extends CannedMessage {
   constructor(client: DexareClient<any>) {
     super(client, {
       name: 'craigrole',
-      description: 'Explains the "Craig" role.',
-      aliases: ['craig-role']
+      description: 'Explains access roles.',
+      aliases: ['craig-role', 'accessrole', 'access-role', 'accessroles', 'access-roles']
     });
 
     this.filePath = __filename;

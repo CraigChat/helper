@@ -10,7 +10,7 @@ export default class Deleted extends CannedMessage {
         title: 'Deleted means deleted.',
         description: stripIndents`
           Deleted means deleted. We do not hoard old audio data; We need that disk space!
-          If you have trouble getting to your downloads in time, it is recommended to link to Google Drive.
+          If you have trouble getting to your downloads in time, it is recommended to link to Google Drive or Microsoft OneDrive.
         `
       }
     ]

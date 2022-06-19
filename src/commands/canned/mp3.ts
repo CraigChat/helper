@@ -8,7 +8,7 @@ export default class Mp3 extends CannedMessage {
     embeds: [
       {
         title: 'MP3',
-        description: oneLine` Join the 21st century. http://craig.chat/home/newbie.html`
+        description: oneLine` Join the 21st century. https://craig.chat/primer/`
       }
     ]
   };

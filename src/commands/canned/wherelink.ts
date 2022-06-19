@@ -3,14 +3,14 @@ import { DexareClient } from 'dexare';
 
 import { CannedMessage } from '../../util/abstracts';
 
-export default class Dm extends CannedMessage {
+export default class WhereLink extends CannedMessage {
   content = {
     embeds: [
       {
-        title: 'The link is sent via DM',
+        title: 'Where is my link?',
         description: stripIndents`
-          Quoth the web site:
-          > Craig tells you by private message where you can download your audio. Since you can download while still recording, he tells you at the beginning of recording, not the end!
+          You will find your recording links in your direct messages.
+          If you have DMs disabled, you can find your latest recordings with the \`/recordings\` command.
 
           If you are looking for the link from an auto-recording, the person who set the auto-recording rule will get the DM.
         `
@@ -20,9 +20,9 @@ export default class Dm extends CannedMessage {
 
   constructor(client: DexareClient<any>) {
     super(client, {
-      name: 'dm',
-      description: 'Craig sends you info in a DM.',
-      aliases: ['pm', 'private-message', 'direct-message', 'directmessage']
+      name: 'wherelink',
+      description: 'Where is my link?',
+      aliases: ['wml', 'where-my-link', 'where-my-links', 'where-my-recording-link', 'where-my-recording-links']
     });
 
     this.filePath = __filename;
