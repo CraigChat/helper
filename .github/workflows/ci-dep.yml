@@ -10,11 +10,14 @@ jobs:
       pull-requests: write
       contents: write
     steps:
+      - name: Wait a bit for checks to populate...
+        run: sleep 30s
+        shell: bash
       - name: Wait for checks to succeed
         uses: lewagon/wait-on-check-action@v1.1.2
         with:
           ref: ${{ github.ref }}
-          check-name: 'Lint source code'
+          running-workflow-name: 'Automerge Dependabot PRs'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
       - uses: fastify/github-action-merge-dependabot@v3
