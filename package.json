@@ -28,7 +28,7 @@
   "dependencies": {
     "@dexare/logger": "^1.0.2",
     "common-tags": "^1.8.2",
-    "config": "^3.3.7",
+    "config": "^3.3.8",
     "dexare": "^3.0.0",
     "eris": "^0.17.1",
     "lodash": "^4.17.21"
