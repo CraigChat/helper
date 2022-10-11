@@ -20,6 +20,7 @@ export default class MoreDetail extends CannedMessage {
           - Has slash commands
           - Has the "Change Nickname" permission
           - Can connect to your voice channel
+          - Can view the channel you are using \`/join\` in
         `
       }
     ]

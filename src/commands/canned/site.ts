@@ -1,4 +1,3 @@
-import { oneLine } from 'common-tags';
 import { DexareClient } from 'dexare';
 
 import { CannedMessage } from '../../util/abstracts';
@@ -9,8 +8,7 @@ export default class Site extends CannedMessage {
       {
         title: 'Main Site',
         url: 'https://craig.chat',
-        description: oneLine`
-        Craig's website: https://craig.chat`
+        description: "Craig's website: https://craig.chat"
       }
     ]
   };

@@ -9,11 +9,9 @@ export default class RecNick extends CannedMessage {
       {
         title: 'The `![RECORDING]` nickname',
         description: stripIndents`
-      Craig nicknames itself whenever the bot starts recording.
-      This nickname cannot be changed during the recording and changes to it mid-recording will stop the recording.
-
-      Due to Discord's ratelimit, Craig will not remove it's own nickname when the recording finishes.
-    `
+          Craig nicknames itself whenever the bot starts recording.
+          This nickname cannot be changed during the recording and changes to it mid-recording will stop the recording.
+        `
       }
     ]
   };
