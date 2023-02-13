@@ -707,10 +707,10 @@ dexare@^2.2.1:
     eventemitter3 "^4.0.7"
     lodash "^4.17.21"
 
-dexare@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/dexare/-/dexare-3.0.0.tgz#b9c567a5fc61d258f9637389e6e52dc67f5c11c7"
-  integrity sha512-cDDFdEzqcocx7TX4gg3Fxy5QYdgMNsY+tBQ7SocaCcTuF9d2w8ycBAC1aHhnM1pu+Rrp5vibeLmohtVJBrWb0w==
+dexare@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/dexare/-/dexare-3.0.1.tgz#d7a675b734d4d163ce567d6b338600194975b778"
+  integrity sha512-Fpoo0nUOogXr3Etrg157emz2lwvbyX0vFT5qXj3+7W9N3Kwr6lhK/+lHB0XmqkUC7uDfW4oOxojNOtviOCCxJA==
   dependencies:
     "@discordjs/collection" "0.1.6"
     common-tags "^1.8.2"
