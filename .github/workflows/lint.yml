@@ -6,6 +6,8 @@ on:
       - ".eslintrc.*"
       - ".prettierrc"
       - ".eslintignore"
+      - "package.json"
+      - "yarn.lock"
       - ".github/workflows/lint.yml"
   pull_request_target:
   workflow_dispatch:
