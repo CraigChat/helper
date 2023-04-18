@@ -30,7 +30,7 @@
     "common-tags": "^1.8.2",
     "config": "^3.3.9",
     "dexare": "^3.0.1",
-    "@projectdysnomia/dysnomia": "^0.1.1",
+    "eris": "^0.17.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
