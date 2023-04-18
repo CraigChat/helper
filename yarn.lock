@@ -724,10 +724,10 @@ dexare@^2.2.1:
     eventemitter3 "^4.0.7"
     lodash "^4.17.21"
 
-dexare@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/dexare/-/dexare-3.0.1.tgz#d7a675b734d4d163ce567d6b338600194975b778"
-  integrity sha512-Fpoo0nUOogXr3Etrg157emz2lwvbyX0vFT5qXj3+7W9N3Kwr6lhK/+lHB0XmqkUC7uDfW4oOxojNOtviOCCxJA==
+dexare@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/dexare/-/dexare-3.0.2.tgz#34efaa198995e8004704c5ed837882026929e66f"
+  integrity sha512-dpriqEX/rUGCrVAUbTGmHb5iNDSQjphnrX95DTyQwy20dAZZ30WfCRDZSbp3mApSLhhLk0S86amNIjD5cLUaQw==
   dependencies:
     "@discordjs/collection" "0.1.6"
     common-tags "^1.8.2"
@@ -792,10 +792,9 @@ eol@^0.9.1:
   resolved "https://registry.yarnpkg.com/eol/-/eol-0.9.1.tgz#f701912f504074be35c6117a5c4ade49cd547acd"
   integrity sha512-Ds/TEoZjwggRoz/Q2O7SE3i4Jm66mqTDfmdHdq/7DKVk3bro9Q8h6WdXKdPqFLMoqxrDK5SVRzHVPOS6uuGtrg==
 
-eris@^0.17.2:
-  version "0.17.2"
-  resolved "https://registry.yarnpkg.com/eris/-/eris-0.17.2.tgz#927542885b3b2ba6b14fffaaac85aa7ba02dc2ed"
-  integrity sha512-OzffDSL81VooFXfRn56ienSg7J6fagoN8WdkmCHjn0B9a4jUA3bVouMztQiaXT54jHV5jaX9D0mJ/b9/0mFoVg==
+"eris@github:projectdysnomia/dysnomia#42840022b25dfd68dd07b2648866397c2df8398e":
+  version "0.2.0-dev"
+  resolved "https://codeload.github.com/projectdysnomia/dysnomia/tar.gz/42840022b25dfd68dd07b2648866397c2df8398e"
   dependencies:
     ws "^8.2.3"
   optionalDependencies:
