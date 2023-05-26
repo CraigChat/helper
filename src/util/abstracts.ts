@@ -87,7 +87,9 @@ export abstract class CannedMessage extends GeneralCommand {
         embeds: [
           {
             footer: {
-              text: `Requested by ${ctx.author.username}#${ctx.author.discriminator} (${ctx.author.id})`,
+              text: `Requested by ${ctx.author.discriminator === '0' ? ctx.author.username : `${ctx.author.username}#${ctx.author.discriminator}`} (${
+                ctx.author.id
+              })`,
               icon_url: ctx.author.dynamicAvatarURL('png', 256)
             }
           }
