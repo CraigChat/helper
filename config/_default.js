@@ -13,7 +13,7 @@ module.exports = {
       defaultImageSize: 256,
       maxShards: 1,
       messageLimit: 0,
-      intents: ['guilds', 'guildMessages']
+      intents: ['guilds', 'guildMessages', 'messageContent']
     },
 
     elevated: ['158049329150427136'],
