@@ -11,9 +11,12 @@ module.exports = {
       },
       defaultImageFormat: 'png',
       defaultImageSize: 256,
-      maxShards: 1,
       messageLimit: 0,
-      intents: ['guilds', 'guildMessages', 'messageContent']
+      gateway: {
+        maxShards: 1,
+        intents: ['guilds', 'guildMessages', 'messageContent'],
+        requestTimeout: 15000
+      }
     },
 
     elevated: ['158049329150427136'],
