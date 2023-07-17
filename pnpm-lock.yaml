@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@dexare/logger':
     specifier: ^1.0.2
@@ -14,8 +18,8 @@ dependencies:
     specifier: ^3.0.2
     version: 3.0.2(@projectdysnomia/dysnomia@0.2.0-dev)
   eris:
-    specifier: github:projectdysnomia/dysnomia#dev
-    version: github.com/projectdysnomia/dysnomia/42840022b25dfd68dd07b2648866397c2df8398e
+    specifier: github:CraigChat/dysnomia#craig-master
+    version: github.com/CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -839,7 +843,7 @@ packages:
     dependencies:
       '@discordjs/collection': 0.1.6
       common-tags: 1.8.2
-      eris: github.com/projectdysnomia/dysnomia/42840022b25dfd68dd07b2648866397c2df8398e
+      eris: github.com/CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533
       eventemitter3: 4.0.7
       lodash: 4.17.21
     dev: false
@@ -2785,26 +2789,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  github.com/abalabahaha/eris/072db2e78ce83fc50d70a21f26f51781f725fa20:
-    resolution: {tarball: https://codeload.github.com/abalabahaha/eris/tar.gz/072db2e78ce83fc50d70a21f26f51781f725fa20}
-    name: eris
-    version: 0.16.2-dev
-    engines: {node: '>=10.4.0'}
-    dependencies:
-      ws: 8.13.0
-    optionalDependencies:
-      opusscript: 0.0.8
-      tweetnacl: 1.0.3
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-    dev: false
-
-  github.com/projectdysnomia/dysnomia/42840022b25dfd68dd07b2648866397c2df8398e:
-    resolution: {tarball: https://codeload.github.com/projectdysnomia/dysnomia/tar.gz/42840022b25dfd68dd07b2648866397c2df8398e}
+  github.com/CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533:
+    resolution: {tarball: https://codeload.github.com/CraigChat/dysnomia/tar.gz/e09830de73930094bacc3480f6306cef4c97c533}
     name: '@projectdysnomia/dysnomia'
     version: 0.2.0-dev
-    engines: {node: '>=18.0.0'}
+    engines: {node: '>=16.0.0'}
     peerDependencies:
       '@discordjs/opus': ^0.9.0
       erlpack: github:discord/erlpack || github:abalabahaha/erlpack
@@ -2825,6 +2814,21 @@ packages:
         optional: true
       zlib-sync:
         optional: true
+    dependencies:
+      ws: 8.13.0
+    optionalDependencies:
+      opusscript: 0.0.8
+      tweetnacl: 1.0.3
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
+
+  github.com/abalabahaha/eris/072db2e78ce83fc50d70a21f26f51781f725fa20:
+    resolution: {tarball: https://codeload.github.com/abalabahaha/eris/tar.gz/072db2e78ce83fc50d70a21f26f51781f725fa20}
+    name: eris
+    version: 0.16.2-dev
+    engines: {node: '>=10.4.0'}
     dependencies:
       ws: 8.13.0
     optionalDependencies:
