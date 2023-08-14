@@ -19,7 +19,7 @@ dependencies:
     version: 3.0.2(@projectdysnomia/dysnomia@0.2.0-dev)
   eris:
     specifier: github:CraigChat/dysnomia#craig-master
-    version: github.com/CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533
+    version: git/github.com+CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^18.15.11
     version: 18.15.11
   '@types/ws':
-    specifier: ^8.5.4
-    version: 8.5.4
+    specifier: ^8.5.5
+    version: 8.5.5
   eslint:
     specifier: ^8.38.0
     version: 8.38.0
@@ -261,8 +261,8 @@ packages:
     resolution: {integrity: sha512-txGIh+0eDFzKGC25zORnswy+br1Ha7hj5cMVwKIU7+s0U2AxxJru/jZSMU6OC9MJWP6+pc/hc6ZjyZShpsyY2g==}
     dev: false
 
-  /@types/ws@8.5.4:
-    resolution: {integrity: sha512-zdQDHKUgcX/zBc4GrwsE/7dVdAD8JR4EuiAXiiUhhfyIJXXb2+PrGshFyeXWQPMmmZ2XxgaqclgpIC7eTXc1mg==}
+  /@types/ws@8.5.5:
+    resolution: {integrity: sha512-lwhs8hktwxSjf9UaZ9tG5M03PGogvFaH8gUgLNbN9HKIg0dvv6q+gkSuJ8HN4/VbyxkuLzCjlN7GquQ0gUJfIg==}
     dependencies:
       '@types/node': 18.15.11
     dev: true
@@ -828,7 +828,7 @@ packages:
     dependencies:
       '@discordjs/collection': 0.1.6
       common-tags: 1.8.2
-      eris: github.com/abalabahaha/eris/072db2e78ce83fc50d70a21f26f51781f725fa20
+      eris: git/github.com+abalabahaha/eris/072db2e78ce83fc50d70a21f26f51781f725fa20
       eventemitter3: 4.0.7
       lodash: 4.17.21
     transitivePeerDependencies:
@@ -843,7 +843,7 @@ packages:
     dependencies:
       '@discordjs/collection': 0.1.6
       common-tags: 1.8.2
-      eris: github.com/CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533
+      eris: git/github.com+CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533
       eventemitter3: 4.0.7
       lodash: 4.17.21
     dev: false
@@ -2789,8 +2789,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  github.com/CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533:
-    resolution: {tarball: https://codeload.github.com/CraigChat/dysnomia/tar.gz/e09830de73930094bacc3480f6306cef4c97c533}
+  git/github.com+CraigChat/dysnomia/e09830de73930094bacc3480f6306cef4c97c533:
+    resolution: {commit: e09830de73930094bacc3480f6306cef4c97c533, repo: git@github.com:CraigChat/dysnomia.git, type: git}
     name: '@projectdysnomia/dysnomia'
     version: 0.2.0-dev
     engines: {node: '>=16.0.0'}
@@ -2824,8 +2824,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  github.com/abalabahaha/eris/072db2e78ce83fc50d70a21f26f51781f725fa20:
-    resolution: {tarball: https://codeload.github.com/abalabahaha/eris/tar.gz/072db2e78ce83fc50d70a21f26f51781f725fa20}
+  git/github.com+abalabahaha/eris/072db2e78ce83fc50d70a21f26f51781f725fa20:
+    resolution: {commit: 072db2e78ce83fc50d70a21f26f51781f725fa20, repo: git@github.com:abalabahaha/eris.git, type: git}
     name: eris
     version: 0.16.2-dev
     engines: {node: '>=10.4.0'}
