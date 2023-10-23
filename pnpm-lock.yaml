@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^1.8.3
     version: 1.8.3
   '@types/config':
-    specifier: ^3.3.1
-    version: 3.3.1
+    specifier: ^3.3.2
+    version: 3.3.2
   '@types/lodash':
     specifier: ^4.14.200
     version: 4.14.200
@@ -226,8 +226,8 @@ packages:
     resolution: {integrity: sha512-v3smfzf7umSwpkJrmlUe+apSv6bVnrIFCeBeprnP4f8lIh6pECZxyD50e8yFwfouIt85TdxN5yXiFwS5fnsS3w==}
     dev: true
 
-  /@types/config@3.3.1:
-    resolution: {integrity: sha512-ZhBk8IVIbc3cuES10j2I+xa3L68rpl1X35FdsNce/AiE7yJnhQaA7tvO5MRZblqpBny4OIddJ+WQL04I1933Zg==}
+  /@types/config@3.3.2:
+    resolution: {integrity: sha512-NAxsgr73BakGnfpHq5eKmtba/x+JyPcZmSa0DzCTdR4JCxeSC+KpwSQuOMGvACs7axkjGqi44/zYRkhiX7aDew==}
     dev: true
 
   /@types/json-schema@7.0.11:
