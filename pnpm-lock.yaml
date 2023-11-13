@@ -26,8 +26,8 @@ dependencies:
 
 devDependencies:
   '@types/common-tags':
-    specifier: ^1.8.3
-    version: 1.8.3
+    specifier: ^1.8.4
+    version: 1.8.4
   '@types/config':
     specifier: ^3.3.3
     version: 3.3.3
@@ -222,8 +222,8 @@ packages:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
     dev: true
 
-  /@types/common-tags@1.8.3:
-    resolution: {integrity: sha512-v3smfzf7umSwpkJrmlUe+apSv6bVnrIFCeBeprnP4f8lIh6pECZxyD50e8yFwfouIt85TdxN5yXiFwS5fnsS3w==}
+  /@types/common-tags@1.8.4:
+    resolution: {integrity: sha512-S+1hLDJPjWNDhcGxsxEbepzaxWqURP/o+3cP4aa2w7yBXgdcmKGQtZzP8JbyfOd0m+33nh+8+kvxYE2UJtBDkg==}
     dev: true
 
   /@types/config@3.3.3:
