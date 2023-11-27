@@ -38,7 +38,7 @@
     "@types/config": "^3.3.3",
     "@types/lodash": "^4.14.201",
     "@types/node": "^18.15.11",
-    "@types/ws": "^8.5.9",
+    "@types/ws": "^8.5.10",
     "eslint": "^8.54.0",
     "eslint-config-snazzah": "^1.2.1",
     "ts-devscript": "^3.0.7",
