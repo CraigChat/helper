@@ -28,7 +28,7 @@
   "dependencies": {
     "@dexare/logger": "^1.0.2",
     "common-tags": "^1.8.2",
-    "config": "^3.3.9",
+    "config": "^3.3.10",
     "dexare": "^3.0.2",
     "eris": "github:CraigChat/dysnomia#craig-master",
     "lodash": "^4.17.21"
