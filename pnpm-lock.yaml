@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.8.2
     version: 1.8.2
   config:
-    specifier: ^3.3.9
-    version: 3.3.9
+    specifier: ^3.3.11
+    version: 3.3.11
   dexare:
     specifier: ^3.0.2
     version: 3.0.2(@projectdysnomia/dysnomia@0.2.0-dev)
@@ -751,8 +751,8 @@ packages:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
-  /config@3.3.9:
-    resolution: {integrity: sha512-G17nfe+cY7kR0wVpc49NCYvNtelm/pPy8czHoFkAgtV1lkmcp7DHtWCdDu+C9Z7gb2WVqa9Tm3uF9aKaPbCfhg==}
+  /config@3.3.11:
+    resolution: {integrity: sha512-Dhn63ZoWCW5EMg4P0Sl/XNsj/7RLiUIA1x1npCy+m2cRwRHzLnt3UtYtxRDMZW/6oOMdWhCzaGYkOcajGgrAOA==}
     engines: {node: '>= 10.0.0'}
     dependencies:
       json5: 2.2.3
