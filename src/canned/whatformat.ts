@@ -1,5 +1,5 @@
 import { stripIndents } from 'common-tags';
-import { CannedMessage } from '../util';
+import type { CannedMessage } from '../util';
 
 export default {
   name: 'whatformat',

@@ -2,7 +2,8 @@ import Dysnomia, { Client } from '@projectdysnomia/dysnomia';
 
 import { Glob } from 'bun';
 import { basename, join } from 'node:path';
-import { CannedMessage } from './util';
+import type { CannedMessage } from './util';
+import { stripIndents } from 'common-tags';
 
 export const client = new Client(process.env.DISCORD_BOT_TOKEN!, {
   gateway: {
@@ -49,12 +50,25 @@ for await (const file of glob.scan(__dirname)) {
 
 client.on('messageCreate', async (message) => {
   if (!message.content || message.author.bot || message.author.system) return;
-  if (message.channel.id !== '245020622277705728') return;
   const prefixRegex = new RegExp(`^(\\?|<@!?${client.user.id}>) ?`);
   const match = prefixRegex.exec(message.content);
   if (!match) return;
   const parts = message.content.slice(match[0].length).split(' ');
-  const commandName = parts[0].toLowerCase();
+  const commandName = parts[0]?.toLowerCase();
+  if (!commandName) return;
+
+  if (commandName === 'canned')
+    return client.createMessage(message.channel.id, {
+        messageReference: {
+          messageID: message.id,
+          failIfNotExists: false,
+        },
+        content: stripIndents`
+          **Canned messages:**
+          ${Array.from(canned.values()).map((command) => `?${command.name} - *${command.description}*`).join('\n')}
+        `
+    });
+
   if (canned.has(commandName) || cannedAliases.has(commandName)) {
     const name = canned.get(commandName)?.name || cannedAliases.get(commandName);
     const msg = name ? canned.get(name) : null;

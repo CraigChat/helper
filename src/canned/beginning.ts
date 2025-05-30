@@ -1,5 +1,5 @@
 import { oneLine } from 'common-tags';
-import { CannedMessage } from '../util';
+import type { CannedMessage } from '../util';
 
 export default {
   name: 'beginning',

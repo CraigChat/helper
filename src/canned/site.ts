@@ -1,4 +1,4 @@
-import { CannedMessage } from '../util';
+import type { CannedMessage } from '../util';
 
 export default {
   name: 'site',
