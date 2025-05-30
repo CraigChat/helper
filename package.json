@@ -2,14 +2,11 @@
   "name": "craig-helperbot",
   "version": "1.0.0",
   "description": "Helper bot for Craig",
-  "main": "dist/index.js",
   "private": true,
   "scripts": {
-    "start": "cd dist && node index.js",
-    "build": "npx rimraf dist && tsc",
-    "dev": "devScript",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "format": "prettier --write \"src/**/*.{ts,js,json}\""
   },
   "repository": "https://github.com/CraigChat/helper",
   "author": {
@@ -26,23 +23,13 @@
   },
   "homepage": "https://github.com/CraigChat/helper#readme",
   "dependencies": {
-    "@dexare/logger": "^1.0.2",
-    "common-tags": "^1.8.2",
-    "config": "^3.3.9",
-    "dexare": "^3.0.2",
-    "eris": "github:CraigChat/dysnomia#craig-master",
-    "lodash": "^4.17.21"
+    "@projectdysnomia/dysnomia": "^0.2.3",
+    "common-tags": "^1.8.2"
   },
   "devDependencies": {
+    "@types/bun": "latest",
     "@types/common-tags": "^1.8.4",
-    "@types/config": "^3.3.3",
-    "@types/lodash": "^4.14.202",
-    "@types/node": "^18.15.11",
-    "@types/ws": "^8.5.10",
-    "eslint": "^8.55.0",
-    "eslint-config-snazzah": "^1.2.1",
-    "ts-devscript": "^3.0.7",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "prettier": "^3.5.3",
+    "typescript": "^5"
   }
 }
