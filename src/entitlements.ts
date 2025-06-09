@@ -30,15 +30,19 @@ export async function getUserRewardTier(userId: string): Promise<number> {
   return result[0]?.rewardTier ?? 0;
 }
 
-export async function updateUserRoles(userId: string, userTier: number) {
+export async function updateUserRoles(user: Dysnomia.Member | string, userTier: number) {
   if (!process.env.GUILD_ID || !process.env.TIER_ROLE_PAIRING || userTier === -1) return;
 
+  const userId = typeof user === 'string' ? user : user.id;
   try {
-    const guild = client.guilds.get(process.env.GUILD_ID);
-    if (!guild) return;
-
     const roleTiers = parseRolePairings(process.env.TIER_ROLE_PAIRING);
-    const member = await guild.getRESTMember(userId);
+
+    let member = typeof user === 'string' ? null : user;
+    if (typeof user === 'string') {
+      const guild = client.guilds.get(process.env.GUILD_ID);
+      if (!guild) return;
+      member = (await guild.fetchMembers({ userIDs: [user] }))[0]!;
+    }
     if (!member) return;
 
     // Remove all tier roles first
