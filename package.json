@@ -2,10 +2,12 @@
   "name": "craig-helperbot",
   "version": "2.0.0",
   "description": "Helper bot for Craig",
+  "type": "module",
   "private": true,
   "scripts": {
-    "start": "bun run src/index.ts",
-    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index",
+    "dev": "bun run --watch src/index",
+    "sync": "bun run scripts/sync",
     "format": "prettier --write \"src/**/*.{ts,js,json}\""
   },
   "repository": "https://github.com/CraigChat/helper",
@@ -24,7 +26,8 @@
   "homepage": "https://github.com/CraigChat/helper#readme",
   "dependencies": {
     "@projectdysnomia/dysnomia": "^0.2.3",
-    "common-tags": "^1.8.2"
+    "common-tags": "^1.8.2",
+    "slash-create": "^6.4.1"
   },
   "devDependencies": {
     "@types/bun": "latest",
