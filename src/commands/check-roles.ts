@@ -24,12 +24,12 @@ export default class CheckRolesCommand extends SlashCommand {
       return 'You do not have permission to use this command.';
     }
 
-    const targetUser = ctx.options.user;
     const guild = client.guilds.get(ctx.guildID!);
     if (!guild) return 'Could not find guild';
 
+    const targetUser = ctx.options.user;
     if (targetUser) {
-      const member = await guild.getRESTMember(targetUser).catch(() => null);
+      const member = (await guild.fetchMembers({ userIDs: [targetUser] }))[0];
       if (!member) return 'Could not find that user in the server';
 
       const userTier = await getUserRewardTier(targetUser);

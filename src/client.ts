@@ -12,6 +12,8 @@ export const creator = new SlashCreator({
   token: process.env.DISCORD_BOT_TOKEN
 });
 
+creator.on('commandRun', (command, _, ctx) => console.info(`${ctx.user.username}#${ctx.user.discriminator} (${ctx.user.id}) ran command ${command.commandName}`));
+
 export const client = new Client(process.env.DISCORD_BOT_TOKEN!, {
   gateway: {
     intents: ['guilds', 'guildMessages', 'messageContent', 'guildMembers'],
