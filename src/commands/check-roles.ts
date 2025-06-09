@@ -44,7 +44,7 @@ export default class CheckRolesCommand extends SlashCommand {
         checkedCount++;
         try {
           const userTier = await getUserRewardTier(member.id);
-          await updateUserRoles(member.id, userTier);
+          await updateUserRoles(member, userTier);
         } catch (error) {
           console.error(`Error checking roles for ${member.id}:`, error);
         }
