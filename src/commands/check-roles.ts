@@ -34,7 +34,7 @@ export default class CheckRolesCommand extends SlashCommand {
 
       const userTier = await getUserRewardTier(targetUser);
       await updateUserRoles(targetUser, userTier);
-      await ctx.editOriginal(`Checked roles for ${member.username} (Tier: ${userTier})`);
+      await ctx.editOriginal(`Checked roles for ${member.mention} (${member.username}, Internal Tier: ${userTier})`);
     } else {
       // Check all users
       let checkedCount = 0;
