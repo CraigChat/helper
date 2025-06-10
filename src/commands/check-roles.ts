@@ -40,17 +40,26 @@ export default class CheckRolesCommand extends SlashCommand {
       let checkedCount = 0;
       const members = await guild.fetchMembers({ limit: 0, query: '' });
 
-      for (const member of members) {
-        checkedCount++;
-        try {
-          const userTier = await getUserRewardTier(member.id);
-          await updateUserRoles(member, userTier);
-        } catch (error) {
-          console.error(`Error checking roles for ${member.id}:`, error);
-        }
+      // Set up status update interval
+      const updateInterval = setInterval(async () => {
+        await ctx.editOriginal(`Checking roles... (${checkedCount}/${members.length} members checked)`).catch(() => {});
+      }, 1000);
 
-        if (checkedCount % 20 === 0)
-          await ctx.editOriginal(`Checking roles... (${checkedCount}/${members.length} members checked)`);
+      try {
+        // Process members
+        await Promise.all(members.map(async (member) => {
+          try {
+            const userTier = await getUserRewardTier(member.id);
+            await updateUserRoles(member, userTier);
+            checkedCount++;
+          } catch (error) {
+            console.error(`Error checking roles for ${member.id}:`, error);
+            checkedCount++;
+          }
+        }));
+      } finally {
+        // Always clear the interval
+        clearInterval(updateInterval);
       }
 
       await ctx.editOriginal(`Finished checking roles for ${checkedCount} members.`);
