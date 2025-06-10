@@ -6,6 +6,8 @@ export interface WebhookData {
   event: 'ENTITLEMENT_CREATE' | 'ENTITLEMENT_UPDATE' | 'ENTITLEMENT_DELETE';
   entitlement: Dysnomia.Entitlement;
   tier: number;
+  clientId: string;
+  shardId: number;
 }
 
 interface RoleTier {

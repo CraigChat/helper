@@ -18,7 +18,7 @@ export const server = Bun.serve({
         return new Response("Invalid JSON", { status: 400 });
       }
 
-      const { event, entitlement, tier } = data as WebhookData;
+      const { event, entitlement, tier, shardId } = data as WebhookData;
 
       if (!event || !entitlement?.skuID || !entitlement?.userID || typeof tier !== "number")
         return new Response("Missing or invalid fields", { status: 400 });
@@ -47,7 +47,8 @@ export const server = Bun.serve({
                 `Guild ID: ${entitlement.guildID ?? '<none>'}`,
                 `Starts At: ${entitlement.startsAt ? `<t:${Math.round(new Date(entitlement.startsAt).valueOf() / 1000)}:F>` : '<none>'}`,
                 `Ends At: ${entitlement.endsAt ? `<t:${Math.round(new Date(entitlement.endsAt).valueOf() / 1000)}:F>` : '<none>'}`,
-                `Type: ${entitlement.type}`
+                `Type: ${entitlement.type}`,
+                `Shard ID: ${shardId}`
               ].join('\n'),
               timestamp: new Date().toISOString()
             }]
