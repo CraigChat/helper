@@ -49,6 +49,7 @@ for await (const file of new Glob('commands/**/*.ts').scan(__dirname)) {
 }
 
 client.on('debug', (m) => console.log('[dysnomia:debug]', m));
+client.on('warn', (e) => console.log('[dysnomia:warn]', e));
 client.on('error', (e) => console.log('[dysnomia:error]', e));
 client.on('ready', () =>
   console.info(

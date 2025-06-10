@@ -1,3 +1,4 @@
+import "./server";
 import { client } from "./client";
 
 await client.connect();

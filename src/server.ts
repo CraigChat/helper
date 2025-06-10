@@ -26,6 +26,35 @@ export const server = Bun.serve({
       const userTier = await getUserRewardTier(entitlement.userID);
       await updateUserRoles(entitlement.userID, userTier);
 
+      if (process.env.DISCORD_WEBHOOK_URL) {
+        const eventColors = {
+          'ENTITLEMENT_CREATE': 0x57F287,
+          'ENTITLEMENT_UPDATE': 0xFEE75C,
+          'ENTITLEMENT_DELETE': 0xED4245
+        };
+
+        await fetch(process.env.DISCORD_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            content: `-# https://discord.com/application-directory/${entitlement.applicationID}/store/${entitlement.skuID}`,
+            embeds: [{
+              title: event,
+              color: eventColors[event],
+              description: [
+                `SKU: ${entitlement.skuID}`,
+                `User ID: ${entitlement.userID ?? '<none>'}`,
+                `Guild ID: ${entitlement.guildID ?? '<none>'}`,
+                `Starts At: ${entitlement.startsAt ? `<t:${Math.round(new Date(entitlement.startsAt).valueOf() / 1000)}:F>` : '<none>'}`,
+                `Ends At: ${entitlement.endsAt ? `<t:${Math.round(new Date(entitlement.endsAt).valueOf() / 1000)}:F>` : '<none>'}`,
+                `Type: ${entitlement.type}`
+              ].join('\n'),
+              timestamp: new Date().toISOString()
+            }]
+          })
+        });
+      }
+
       return new Response("Ok", { status: 200 });
     }
 
