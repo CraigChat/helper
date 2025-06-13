@@ -62,7 +62,7 @@ export default class CheckRolesCommand extends SlashCommand {
         clearInterval(updateInterval);
       }
 
-      await ctx.editOriginal(`Finished checking roles for ${checkedCount} members.`);
+      await ctx.editOriginal(`Finished checking roles for ${members.length.toLocaleString()} members.`);
     }
   }
 }

@@ -51,11 +51,42 @@ for await (const file of new Glob('commands/**/*.ts').scan(__dirname)) {
 client.on('debug', (m) => console.log('[dysnomia:debug]', m));
 client.on('warn', (e) => console.log('[dysnomia:warn]', e));
 client.on('error', (e) => console.log('[dysnomia:error]', e));
-client.on('ready', () =>
+client.on('ready', async () => {
   console.info(
     `Logged in as ${client.user.username}#${client.user.discriminator} (${client.user.id})`
-  )
-);
+  );
+
+  // Start periodic role check
+  const checkAllRoles = async () => {
+    if (!process.env.GUILD_ID) return;
+
+    const guild = client.guilds.get(process.env.GUILD_ID);
+    if (!guild) return;
+
+    console.log('Starting periodic role check...');
+
+    try {
+      const members = await guild.fetchMembers({ limit: 0, query: '' });
+      await Promise.all(members.map(async (member) => {
+        try {
+          const userTier = await getUserRewardTier(member.id);
+          await updateUserRoles(member, userTier);
+        } catch (error) {
+          console.error(`Error checking roles for ${member.id}:`, error);
+        }
+      }));
+      console.log(`Finished checking roles for ${members.length.toLocaleString()} members.`);
+    } catch (error) {
+      console.error('Error during periodic role check:', error);
+    }
+  };
+
+  // Run initial check
+  await checkAllRoles();
+
+  // Set up hourly interval
+  setInterval(checkAllRoles, 60 * 60 * 1000); // 1 hour in milliseconds
+});
 
 client.on('messageCreate', async (message) => {
   if (!message.content || message.author.bot || message.author.system) return;
@@ -126,9 +157,10 @@ client.on('messageCreate', async (message) => {
 });
 
 client.on('guildMemberAdd', async (guild, member) => {
+  if (!process.env.GUILD_ID || guild.id !== process.env.GUILD_ID) return;
   try {
     const userTier = await getUserRewardTier(member.id);
-    if (userTier > 0) await updateUserRoles(member.id, userTier);
+    if (userTier > 0) await updateUserRoles(member, userTier);
   } catch (error) {
     console.error(`Error updating roles for new member ${member.id}:`, error);
   }
