@@ -42,6 +42,7 @@ creator.withServer(
   )
 );
 
+// await creator.registerCommandsIn(join(__dirname, 'commands'), ['.ts']);
 for await (const file of new Glob('commands/**/*.ts').scan(__dirname)) {
   const filePath = join(__dirname, file);
   const command = (await import(filePath)).default;
@@ -51,7 +52,7 @@ for await (const file of new Glob('commands/**/*.ts').scan(__dirname)) {
 client.on('debug', (m) => console.log('[dysnomia:debug]', m));
 client.on('warn', (e) => console.log('[dysnomia:warn]', e));
 client.on('error', (e) => console.log('[dysnomia:error]', e));
-client.on('ready', async () => {
+client.once('ready', async () => {
   console.info(
     `Logged in as ${client.user.username}#${client.user.discriminator} (${client.user.id})`
   );
