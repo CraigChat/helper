@@ -10,8 +10,9 @@ export default {
       {
         title: 'Access Roles',
         description: stripIndents`
-          Quoth the [website](https://craig.chat/docs/#setting-up-access-roles):
-          > Previously, access roles were any roles with the name “Craig”. Now, you can set your access roles with the \`/server-settings access-role\` command. You must be able to manage the server or be the server owner to manage access roles. You can view your current server settings with \`/server-settings view\`.
+          Quoth the [website](https://docs.craig.chat/features/access-roles/):
+          > You can use the \`/server-settings access-role\` command to add and remove access roles.
+          > You can view the access roles with \`/server-settings\` view.
         `,
         image: { url: 'attachment://access_roles.png' },
       },

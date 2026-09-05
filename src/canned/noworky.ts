@@ -11,7 +11,7 @@ export default {
         description: stripIndents`
           If Craig just “isn't working” it's almost certainly a problem with permissions:
 
-          (1) If you aren't a server admin, make sure you have an [access role](https://craig.chat/docs/#setting-up-access-roles).
+          (1) If you aren't a server admin, make sure you have an [access role](https://docs.craig.chat/features/access-roles/).
 
           (2) Make sure Craig is actually in your server.
 
